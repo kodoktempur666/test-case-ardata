@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
             'name' => 'warjo',
             'email' => 'warjo@gmail.com',
             'email_verified_at' => now(),
-            'password' => Hash::make('123123'), // ✅ ini akan menghasilkan Bcrypt hash
+            'password' => Hash::make('123123'), 
             'remember_token' => Str::random(10),
             'created_at' => now(),
             'updated_at' => now(),
