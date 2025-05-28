@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "../index.css"; // pastikan ini di-import jika belum
 
 interface Item {
   id: number;
@@ -43,26 +44,34 @@ export default function Home() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div className="container">
       <h1>CRUD Item</h1>
-      <input
-        placeholder="Name"
-        value={form.name}
-        onChange={(e) => setForm({ ...form, name: e.target.value })}
-      />
-      <input
-        placeholder="Description"
-        value={form.description}
-        onChange={(e) => setForm({ ...form, description: e.target.value })}
-      />
-      <button onClick={handleSubmit}>{editingId ? "Update" : "Add"}</button>
+      <div className="form">
+        <input
+          placeholder="Name"
+          value={form.name}
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
+        />
+        <input
+          placeholder="Description"
+          value={form.description}
+          onChange={(e) => setForm({ ...form, description: e.target.value })}
+        />
+        <button onClick={handleSubmit}>
+          {editingId ? "Update" : "Add"}
+        </button>
+      </div>
 
-      <ul>
+      <ul className="item-list">
         {items.map((item) => (
-          <li key={item.id}>
-            <b>{item.name}</b>: {item.description}
-            <button onClick={() => handleEdit(item)}>Edit</button>
-            <button onClick={() => handleDelete(item.id)}>Delete</button>
+          <li key={item.id} className="item">
+            <div>
+              <strong>{item.name}</strong>: {item.description}
+            </div>
+            <div className="actions">
+              <button onClick={() => handleEdit(item)}>Edit</button>
+              <button onClick={() => handleDelete(item.id)}>Delete</button>
+            </div>
           </li>
         ))}
       </ul>
