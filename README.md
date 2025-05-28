@@ -2,7 +2,7 @@
 
 ## Client Setup
 
-First, run the development server:
+First, run :
 
 ```bash
 cd client
@@ -14,7 +14,7 @@ npm run dev
 
 ## Database Setup
 
-First, run the development server:
+First, run :
 
 ```bash
 cd server
