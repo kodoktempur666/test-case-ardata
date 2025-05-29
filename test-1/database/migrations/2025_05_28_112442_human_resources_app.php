@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->string('status');
-            $table->timestamps(); // Automatically handles created_at and updated_at
+            $table->timestamps(); 
             $table->softDeletes();
         });
 
@@ -25,7 +25,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->timestamps(); // Automatically handles created_at and updated_at
+            $table->timestamps(); 
             $table->softDeletes();
         });
 
@@ -38,11 +38,11 @@ return new class extends Migration
             $table->string('address');
             $table->date('birth_date');
             $table->date('hire_date');
-            $table->foreignId('department_id')->constrained()->onDelete('cascade'); // Fixing the foreign key constraint
-            $table->foreignId('role_id')->constrained()->onDelete('cascade'); // Fixing the foreign key constraint
+            $table->foreignId('department_id')->constrained()->onDelete('cascade'); 
+            $table->foreignId('role_id')->constrained()->onDelete('cascade'); 
             $table->string('status');
             $table->decimal('salary', 10, 2)->default(0.00);
-            $table->timestamps(); // Automatically handles created_at and updated_at
+            $table->timestamps(); 
             $table->softDeletes();
         });
 
@@ -54,7 +54,7 @@ return new class extends Migration
             $table->foreignId('assigned_to')->constrained('employees')->onDelete('cascade');
             $table->date('due_date');
             $table->string('status');
-            $table->timestamps(); // Automatically handles created_at and updated_at
+            $table->timestamps(); 
             $table->softDeletes();
         });
 
@@ -67,7 +67,7 @@ return new class extends Migration
             $table->decimal('deduction', 10, 2)->nullable();
             $table->decimal('net_salary', 10, 2);
             $table->date('pay_date');
-            $table->timestamps(); // Automatically handles created_at and updated_at
+            $table->timestamps(); 
             $table->softDeletes();
         });
 
@@ -79,7 +79,7 @@ return new class extends Migration
             $table->date('check_out');
             $table->date('date');
             $table->string('status');
-            $table->timestamps(); // Automatically handles created_at and updated_at
+            $table->timestamps(); 
             $table->softDeletes();
         });
 
@@ -91,7 +91,7 @@ return new class extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->string('status');
-            $table->timestamps(); // Automatically handles created_at and updated_at
+            $table->timestamps(); 
         });
     }
 

@@ -24,14 +24,10 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title">
-                        Data
+                        Masukan Data Tugas Baru
                     </h5>
                 </div>
-                <div class="card-body">
-                    <div class="d-flex">
-                        <a href="{{ route('tasks.create') }}" class="btn btn-primary mb-3 ms-auto">Tambah Tugas Baru</a>
-
-                    </div>
+                
                     <form action="{{ route('tasks.store') }}" method="POST">
                         @csrf
 

@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="{{ asset('mazer/dist/assets/extensions/simple-datatables/style.css') }}">
     <link rel="stylesheet" href="{{  asset('mazer/dist/assets/compiled/css/table-datatable.css')}}">
+
 </head>
 
 <body>
@@ -66,14 +67,14 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
-                        <li class="sidebar-item active ">
-                            <a href="index.html" class='sidebar-link'>
+                        <li class="sidebar-item {{ Request::routeIs('dashboard') ? 'active' : '' }}">
+                            <a href="{{ route('dashboard') }}" class='sidebar-link'>
                                 <i class="bi bi-grid-fill"></i>
                                 <span>Dashboard</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                        <li class="sidebar-item {{ Request::routeIs('tasks.index') ? 'active' : '' }}">
+                            <a href="{{ route('tasks.index') }}" class='sidebar-link'>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Task</span>
                             </a>
@@ -146,6 +147,7 @@
 
     <script src="{{  asset('mazer/dist/assets/extensions/simple-datatables/umd/simple-datatables.js')}}"></script>
     <script src="{{  asset('mazer/dist/assets/static/js/pages/simple-datatables.js')}}"></script>
+
 
 
 
