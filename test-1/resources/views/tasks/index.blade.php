@@ -59,10 +59,42 @@
                                     </td>
                                     <td>
                                         <a href="" class="btn btn-info btn-sm">View</a>
-                                        <a href="" class="btn btn-success btn-sm">Mark Done</a>
-                                        <a href="" class="btn btn-warning btn-sm">Mark Pending</a>
-                                        <a href="" class="btn btn-white btn-sm">Edit</a>
-                                        <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="{{ route('tasks.updateStatus', ['task' => $task->id, 'status' => 'done']) }}"
+                                            class="btn btn-success btn-sm"
+                                            onclick="event.preventDefault(); document.getElementById('mark-done-{{ $task->id }}').submit();">
+                                            Mark Done
+                                        </a>
+
+                                        <form id="mark-done-{{ $task->id }}"
+                                            action="{{ route('tasks.updateStatus', ['task' => $task->id, 'status' => 'done']) }}"
+                                            method="POST" class="d-none">
+                                            @csrf
+                                            @method('PATCH')
+                                        </form>
+
+                                        <a href="{{ route('tasks.updateStatus', ['task' => $task->id, 'status' => 'pending']) }}"
+                                            class="btn btn-warning btn-sm"
+                                            onclick="event.preventDefault(); document.getElementById('mark-pending-{{ $task->id }}').submit();">
+                                            Mark Pending
+                                        </a>
+
+                                        <form id="mark-pending-{{ $task->id }}"
+                                            action="{{ route('tasks.updateStatus', ['task' => $task->id, 'status' => 'pending']) }}"
+                                            method="POST" class="d-none">
+                                            @csrf
+                                            @method('PATCH')
+                                        </form>
+
+                                        <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-light btn-sm">Edit</a>
+
+                                        <form action="{{ route('tasks.destroy', $task->id) }}" method="POST"
+                                            style="display:inline-block;"
+                                            onsubmit="return confirm('Yakin ingin menghapus tugas ini?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        </form>
+
                                     </td>
                                 </tr>
                             @endforeach
