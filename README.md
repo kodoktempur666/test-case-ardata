@@ -117,3 +117,21 @@ npm run db:migrate
 npm run dev
 ```
 
+# TEST 3
+
+## ▶️ Menjalankan Project
+
+First, run:
+```bash
+npm install
+```
+
+- untuk run dengan android device:
+```bash
+npx react-native run-android
+```
+
+- untuk run dengan ios device:
+```bash
+npx react-native run-ios
+```
