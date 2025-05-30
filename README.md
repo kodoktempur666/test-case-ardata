@@ -95,6 +95,14 @@ npm run dev
 
 ## Database Setup
 
+### Konfigurasi `.env`
+
+Atur konfigurasi database di file `.env`
+
+```env
+DATABASE_URL=
+```
+
 First, run :
 
 ```bash
