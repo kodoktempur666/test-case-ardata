@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "14023017891",
+    "project_id": "ardata-f72ff",
+    "storage_bucket": "ardata-f72ff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14023017891:android:ce076622c8668f3fbe0616",
+        "android_client_info": {
+          "package_name": "com.test_3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw-ixZOuCbHic4b95TuW6Tz4WvGZdUZsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
