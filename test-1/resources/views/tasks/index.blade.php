@@ -12,7 +12,6 @@
                 <div class="col-12 col-md-6 order-md-2 order-first">
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
                             <li class="breadcrumb-item" aria-current="page">Task</li>
                             <li class="breadcrumb-item active" aria-current="page">Index</li>
                         </ol>
@@ -58,7 +57,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-info btn-sm">View</a>
+                                        <a href="{{ route('tasks.show', $task->id) }}" class="btn btn-info btn-sm">View</a>
                                         <a href="{{ route('tasks.updateStatus', ['task' => $task->id, 'status' => 'done']) }}"
                                             class="btn btn-success btn-sm"
                                             onclick="event.preventDefault(); document.getElementById('mark-done-{{ $task->id }}').submit();">

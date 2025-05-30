@@ -86,4 +86,11 @@ class TaskController extends Controller
         return redirect()->route('tasks.index')->with('success', 'Status tugas berhasil diubah ke ' . ucfirst($status));
     }
 
+    public function show(Task $task)
+    {
+        return view('tasks.show', compact('task'));
+    }
+
+
+
 }

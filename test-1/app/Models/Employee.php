@@ -16,9 +16,6 @@ class Employee extends Model
         'address',
         'birth_date',
         'hire_date',
-        'department_id',
-        'role_id',
-        'status',
-        'salary'
+        'status'
     ];
 }

@@ -67,60 +67,30 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li class="sidebar-title">Menu</li>
-                        <li class="sidebar-item {{ Request::routeIs('dashboard') ? 'active' : '' }}">
-                            <a href="{{ route('dashboard') }}" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
                         <li class="sidebar-item {{ Request::routeIs('tasks.index') ? 'active' : '' }}">
                             <a href="{{ route('tasks.index') }}" class='sidebar-link'>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Task</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
+                        <li class="sidebar-item {{ Request::routeIs('employees.index') ? 'active' : '' }}">
+                            <a href="{{ route('employees.index') }}" class="sidebar-link">
                                 <i class="bi bi-people-fill"></i>
                                 <span>Karyawan</span>
                             </a>
                         </li>
+
                         <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
-                                <i class="bi bi-briefcase"></i>
-                                <span>Departement</span>
-                            </a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit"
+                                    class="sidebar-link bg-transparent border-0 w-100 text-start px-3 py-2 d-flex align-items-center gap-2">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    <span>Logout</span>
+                                </button>
+                            </form>
                         </li>
-                        <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
-                                <i class="bi bi-tag"></i>
-                                <span>Roles</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
-                                <i class="bi bi-table"></i>
-                                <span>Absensi</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
-                                <i class="bi bi-currency-dollar"></i>
-                                <span>Gaji</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
-                                <i class="bi bi-shift-fill"></i>
-                                <span>Cuti</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="index.html" class='sidebar-link'>
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Logout</span>
-                            </a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
