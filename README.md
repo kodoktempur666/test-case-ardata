@@ -1,4 +1,10 @@
+# ANGGOTA TIM
+- Danuar Ihza Mahendra
+- Frido Afriyanto
+- FIrman Maulana
+- Naufal Ananta
 
+---
 # 🚀 Laravel Project Test 1 Guide
 
 Panduan ini membantu menjalankan project Test 1 ini.
